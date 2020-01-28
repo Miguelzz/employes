@@ -1,0 +1,23 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="../assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Employees
+    </a>
+    <form *ngIf="view == 'home'" class=" form-inline my-2 my-lg-0">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary h c" type="button" id="button-addon1">
+                    <i class="material-icons">search</i>
+                </button>
+            </div>
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" (keyup)="searchEmployee($event.target.value)">
+        </div>
+    </form>
+</nav>
+
+
+<main class="v t">
+    <router-outlet></router-outlet>
+</main>
+
+<footer>Miguel angel ochoa torres</footer>

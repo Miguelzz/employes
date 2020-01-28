@@ -1,0 +1,75 @@
+<form class="v c " [formGroup]="employeeForm" (ngSubmit)="saveEmployee()">
+    <div class="-h " style="width: 1000px; justify-content: space-around;">
+        <div class="img-description h c">
+            <img src="../../assets/images/edit.png" alt="">
+        </div>
+        <!-- <pre class="preview">{{ employeeForm.value | json }}</pre> -->
+        <div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" [ngClass]="{'form-control form-control-sm': true, 'is-invalid': !employeeForm.value.name }" formControlName="name">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Age</label>
+                <input type="number" [ngClass]="{'form-control form-control-sm': true, 'is-invalid': !employeeForm.value.age }" formControlName="age">
+            </div>
+
+            <div class="form-group">
+                <label>Dob</label>
+                <input type="date" [ngClass]="{'form-control form-control-sm': true, 'is-invalid': !employeeForm.value.dob }" formControlName="dob">
+            </div>
+
+
+
+            <div class="form-group v">
+                <label>Country</label>
+                <select [ngClass]="{'form-control form-control-sm custom-select': true, 'is-invalid': !employeeForm.value.country }" formControlName="country">
+                    <option *ngFor="let country of countries" [value]="country.id">{{ country.name }}</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Hire Date</label>
+
+                <input type="date" [ngClass]="{'form-control form-control-sm': true, 'is-invalid': !employeeForm.value.hireDate }" formControlName="hireDate">
+            </div>
+
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switch1" formControlName="status">
+                <label class="custom-control-label" for="switch1">Status</label>
+            </div>
+        </div>
+        <div>
+            <div class="form-group v">
+                <label for="exampleInputEmail1">Area</label>
+                <div class=" btn-group" role="group" aria-label="Basic example">
+                    <button type="button" [ngClass]="{'btn': true, 'btn-primary': employeeForm.value.area === service, 'btn-secondary': employeeForm.value.area !== service}" (click)="employeeForm.controls.area.setValue(service)">Services</button>
+                    <button type="button" [ngClass]="{'btn': true, 'btn-primary': employeeForm.value.area === kitchen, 'btn-secondary': employeeForm.value.area !== kitchen}" (click)="employeeForm.controls.area.setValue(kitchen)">Kitchen</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">User Name</label>
+                <input type="text" [ngClass]="{'form-control form-control-sm': true, 'is-invalid': !employeeForm.value.userName }" formControlName="userName">
+            </div>
+
+
+            <div class="form-group">
+                <label>Job Title</label>
+                <select [ngClass]="{'form-control form-control-sm custom-select': true, 'is-invalid': !employeeForm.value.job }" formControlName="job">
+                    <option *ngFor="let country of jobs[employeeForm.value.area]" [value]="country.id">{{ country.name }}</option>
+                </select>
+            </div>
+            <div *ngIf="employeeForm.value.job  === '5e2e55bbb32fc5983cecfdbe' || employeeForm.value.job  === '5e2e55bb734da57140ee7461'" class="form-group">
+                <label>To Rate</label>
+                <input type="number" [ngClass]="{'form-control form-control-sm': true, 'is-invalid': !employeeForm.value.toRate }" formControlName="toRate">
+            </div>
+
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="!employeeForm.valid" class="edit-employee h c z2 p">
+        <i class="material-icons">save</i>
+    </button>
+</form>

@@ -1,0 +1,39 @@
+<table class="table table-striped z1">
+    <thead>
+        <tr>
+            <th>
+                <div class="h a"> Name <i class="material-icons p" (click)="orderColum('name')">keyboard_arrow_down</i></div>
+            </th>
+            <th>
+                <div class="h a"> Age <i class="material-icons p" (click)="orderColum('age')">keyboard_arrow_down</i></div>
+            </th>
+            <th>
+                <div class="h a"> UserName <i class="material-icons p" (click)="orderColum('user')">keyboard_arrow_down</i></div>
+            </th>
+            <th>
+                <div class="h a"> Hire Date <i class="material-icons p" (click)="orderColum('date')">keyboard_arrow_down</i></div>
+            </th>
+            <th>
+                <div class="h a"> Options</div>
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let employee of filterEmployees; let i = index">
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.userName}}</td>
+            <td>{{employee.hireDate | date: 'yyyy/MM/dd' }}</td>
+            <td class="h o">
+                <i class="material-icons p" [routerLink]="['edit',employee.id]">edit</i>
+                <i class=" material-icons p" [routerLink]="['show',employee.id]">visibility</i>
+                <i class="material-icons p" (click)="deleteEmployee(i)">delete</i>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="addEmployee()" class="add-employee h c z2 p">
+    <i class="material-icons">add</i>
+</button>

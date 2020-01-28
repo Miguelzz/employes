@@ -1,0 +1,19 @@
+.img-description {
+    width: 200px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.preview {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    color: #cccccc;
+}
+
+input,
+select {
+    max-width: 200px;
+}

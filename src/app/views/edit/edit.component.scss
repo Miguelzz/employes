@@ -1,0 +1,36 @@
+.img-description {
+    width: 200px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.preview {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    color: #cccccc;
+}
+
+input,
+select {
+    max-width: 200px;
+}
+
+.edit-employee {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #252525;
+    border-radius: 50%;
+    border: none;
+    color: #dfdfdf;
+
+    &:disabled {
+        background: #dddddd;
+        color: #5f5f5f;
+        cursor: inherit;
+    }
+}

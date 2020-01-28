@@ -1,1 +1,344 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap.scss';
+
+
+/* MINI LIBRARY MADE BY ME */
+
+.h {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.-h {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.v {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.-v {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.h._,
+.-h._ {
+    flex-direction: row-reverse;
+}
+
+.v._,
+.-v._ {
+    flex-direction: column-reverse;
+}
+
+/* *************************************************************************************************************************** */
+.h.c,
+.-h.c,
+.v.c,
+.-v.c,
+.h.-c,
+.v.-c {
+    justify-content: center;
+    align-items: center;
+}
+
+.h.t,
+.h.-t,
+.v.l,
+.v.-l {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.v.t,
+.v.-t {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.h.tl,
+.h.-tl,
+.v.tl,
+.v.-tl {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.v.tr,
+.v.-tr,
+.h.bl,
+.h.-bl {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.h.tr,
+.h.-tr,
+.v.bl,
+.v.-bl {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.h.l,
+.h.-l {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.h.r,
+.h.-r,
+.v.b,
+.v.-b {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.h.b,
+.h.-b,
+.v.r,
+.v.-r {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.h.br,
+.h.-br,
+.v.br,
+.v.-br {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+.h.o,
+.v.o {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.h.o.t,
+.h.o.t-,
+.v.o.l,
+.v.o.l- {
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.h.o.b,
+.h.o.-b,
+.v.o.r,
+.v.o.-r {
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+.h.w,
+.v.w {
+    flex-wrap: wrap;
+}
+
+
+.h.-c,
+.h.-l,
+.h.-r,
+.v.-c,
+.v.-t,
+.v.-b {
+    align-content: center;
+}
+
+.h.-t,
+.h.-tl,
+.h.-tr,
+.v.-l,
+.v.-tl,
+.v.-bl {
+    align-content: flex-start;
+}
+
+.h.-b,
+.h.-bl,
+.h.-br,
+.v.-r,
+.v.-tr,
+.v.-br {
+    align-content: flex-end;
+}
+
+/* //////////////////////////////// */
+.h._.-l,
+.h._.-tl,
+.v._.-t,
+.v._.-tl,
+.h._.-bl,
+.v._.-tr {
+    justify-content: flex-end;
+}
+
+.h._.-r,
+.h._.-tr,
+.h._.-br,
+.v._.-b,
+.v._.-bl,
+.v._.-br {
+    justify-content: flex-start;
+}
+
+/* //////////////////////////////// */
+/* scroll */
+
+
+.s {
+    overflow: auto;
+}
+
+.s::-webkit-scrollbar {
+    width: 7px;
+}
+
+.s::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #cecece;
+}
+
+
+.-h.s {
+    overflow-x: auto;
+}
+
+.h.s {
+    overflow-y: auto;
+}
+
+.v.s,
+.-v.s {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+.h.a,
+.v.a {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h.a.t,
+.h.a.-t,
+.v.a.l,
+.v.a.-l {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.h.a.b,
+.h.a.-b,
+.v.a.r,
+.v.a.-r {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+.h.e,
+.v.e {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.h.e.t,
+.h.e.-t,
+.v.e.l,
+.v.e.-l {
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.h.e.b,
+.h.e.-b,
+.v.e.r,
+.v.e.-r {
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.p {
+    cursor: pointer;
+}
+
+.z1 {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.12),
+        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.z2 {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+        0 1px 10px 0 rgba(0, 0, 0, 0.12),
+        0 2px 4px -1px rgba(0, 0, 0, 0.3);
+
+}
+
+.z3 {
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12),
+        0 5px 5px -3px rgba(0, 0, 0, 0.2);
+
+}
+
+.z4 {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+        0 6px 30px 5px rgba(0, 0, 0, 0.12),
+        0 8px 10px -7px rgba(0, 0, 0, 0.2);
+
+}
+
+.z5 {
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+        0 9px 46px 8px rgba(0, 0, 0, 0.12),
+        0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+.g1 {
+    flex-grow: 1;
+}
+
+.g2 {
+    flex-grow: 2;
+}
+
+.g3 {
+    flex-grow: 3;
+}
+
+.g4 {
+    flex-grow: 4;
+}
+
+.g5 {
+    flex-grow: 5;
+}
+
+.g6 {
+    flex-grow: 6;
+}
+
+app-edit,
+app-show {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+app-home,
+app-add {
+    flex-grow: 1;
+}
